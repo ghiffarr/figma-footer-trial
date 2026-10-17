@@ -1,75 +1,48 @@
-# React + TypeScript + Vite
+# Responsive UI Trial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend implementation exercise using React, TypeScript, and CSS, starting from a Figma footer reference. This repository explores turning a design into a responsive webpage.
 
-Currently, two official plugins are available:
+**[View demo](https://figma-footer-trial.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project scope
 
-## React Compiler
+A UI implementation trial focused on component structure, layout, spacing, typography, and responsive styling. The project started with a footer section and later included updates to the homepage top section. It is a frontend demonstration, with no backend workflow documented here.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- React and TypeScript for the interface
+- CSS for styling
+- Vite for local development and production builds
+- ESLint for code checks
+- Vercel for the hosted demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Run locally
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Install Node.js and npm, then run these commands from the repository root:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the local URL printed by Vite.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available commands
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Run TypeScript build checks and generate the production build |
+| `npm run lint` | Run ESLint |
+| `npm run preview` | Preview the generated build locally |
 
-```
+## Repository guide
+
+- `src/` — React source and styles
+- `public/` — Static assets
+- `vite.config.ts` — Vite configuration
+- `package.json` — Dependencies and scripts
+
+## Review the interface
+
+When making UI changes, check desktop, tablet, and mobile layouts, including text wrapping, spacing, and horizontal overflow.
