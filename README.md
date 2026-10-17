@@ -46,3 +46,7 @@ Open the local URL printed by Vite.
 ## Review the interface
 
 When making UI changes, check desktop, tablet, and mobile layouts, including text wrapping, spacing, and horizontal overflow.
+
+---
+
+[Explore my other projects](https://github.com/ghiffarr#readme)
